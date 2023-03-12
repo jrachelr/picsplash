@@ -1,14 +1,13 @@
 import axios from "axios";
-const key = process.env.API_KEY;
+const key = process.env.REACT_APP_API_KEY;
 
-const SearchImages = async () => {
-  console.log("key:", key);
+const SearchImages = async (term) => {
   const response = await axios.get("https://api.unsplash.com/search/photos", {
     headers: {
-      Authorization: `Client ID ${key}`,
+      Authorization: key,
     },
     params: {
-      query: "cats",
+      query: term,
     },
   });
 

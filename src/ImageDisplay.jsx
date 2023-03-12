@@ -1,9 +1,10 @@
-import "./App.css";
 
-function ImageDisplay() {
-  return <div className="ImageDisplay">ImageDisplay
-  </div>;
+function ImageDisplay({image}) {
+  return (
+    <div>
+    <img src={image.urls.small} alt={image.alt_description} />
+  </div>
+  )
 }
-
 export default ImageDisplay
 ;

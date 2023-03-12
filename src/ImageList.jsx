@@ -1,7 +1,15 @@
-import "./App.css";
+import ImageDisplay from "./ImageDisplay";
 
-function ImageList() {
-  return <div className="ImageList">ImageList</div>;
+function ImageList({images}) {
+  const renderedImages = images.map((image) => {
+    return <ImageDisplay key={image.id} image={image} />
+  })
+  return (
+<div> 
+  {renderedImages}
+</div>
+  )
 }
+
 
 export default ImageList;
